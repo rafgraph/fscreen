@@ -1,0 +1,32 @@
+{
+  "name": "one-page-app",
+  "description": "Boilerplate for one page react app hosted on gh-pages",
+  "scripts": {
+    "start": "webpack-dev-server -d --inline --host 0.0.0.0 --history-api-fallback --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafrex/one-page-app.git"
+  },
+  "author": "Rafael Pedicini <code@rafrex.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
