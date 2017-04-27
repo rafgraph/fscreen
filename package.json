@@ -1,0 +1,25 @@
+{
+  "name": "fscreen",
+  "version": "0.1.0",
+  "description": "fullscreen spec api in a vendor agnostic wrapper",
+  "main": "lib/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafrex/fscreen.git"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "fullscreen",
+    "browser"
+  ],
+  "author": "Rafael Pedicini <code@rafrex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafrex/fscreen/issues"
+  },
+  "homepage": "https://github.com/rafrex/fscreen#readme"
+}
