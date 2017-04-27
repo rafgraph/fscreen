@@ -1,12 +1,12 @@
 {
-  "name": "one-page-app",
-  "description": "Boilerplate for one page react app hosted on gh-pages",
+  "name": "fscreen-example-app",
+  "description": "Example app for fscreen",
   "scripts": {
     "start": "webpack-dev-server -d --inline --host 0.0.0.0 --history-api-fallback --progress"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/one-page-app.git"
+    "url": "git+https://github.com/rafrex/fscreen.git"
   },
   "author": "Rafael Pedicini <code@rafrex.com>",
   "license": "MIT",
