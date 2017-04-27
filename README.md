@@ -1,6 +1,6 @@
 # Fscreen - fullscreen spec api
 
-Vendor agnostic wrapper around the [fullscreen spec api](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API). Build with fullscreen api as intended without worrying about vendor prefixes.
+Vendor agnostic wrapper around the [fullscreen spec api](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API). Build with the fullscreen api as intended without worrying about vendor prefixes.
 
 ```shell
 $ npm install --save fscreen
