@@ -2,7 +2,7 @@
   "name": "fscreen-example-app",
   "description": "Example app for fscreen",
   "scripts": {
-    "start": "webpack-dev-server -d --inline --host 0.0.0.0 --history-api-fallback --progress"
+    "start": "webpack-dev-server -d --host 0.0.0.0 --public 10.0.1.4:8080 --history-api-fallback"
   },
   "repository": {
     "type": "git",
