@@ -45,7 +45,6 @@ class App extends React.PureComponent {
 
   toggleFullscreen = () => {
     if (this.state.inFullscreen) {
-      console.log(fscreen.exitFullscreen);
       fscreen.exitFullscreen();
     } else {
       fscreen.requestFullscreen(this.appElement);
@@ -55,41 +54,43 @@ class App extends React.PureComponent {
   render() {
     const fscreenButtonText = (
       (!this.state.fullscreenEnabled && 'Fullscreen Is Not Available') ||
-      (this.state.inFullscreen && 'Exit Fullscreen') ||
-      'Enter Fullscreen'
+      (this.state.inFullscreen && 'Exit Fullscreen Mode') ||
+      'Enter Fullscreen Mode'
     );
     return (
-      <div ref={this.handleRef}>
-        <div>Fscreen</div>
+      <div ref={this.handleRef} style={{ backgroundColor: '#F0F0F0', minHeight: '100%', minWidth: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <div>
+          <div>Fscreen</div>
+          <div>
+            <Interactive
+              as="a"
+              href="https://github.com/rafrex/fscreen"
+            >
+              https://github.com/rafrex/fscreen
+            </Interactive>
+          </div>
+          <div>Vendor agnostic access to the{' '}
+            <Interactive as="a" href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">
+              Fullscreen API
+            </Interactive>
+          </div>
+          <div>Fullscreen enabled:{' '}
+            <StyleTrueFalse>{this.state.fullscreenEnabled}</StyleTrueFalse>
+          </div>
+          <div>Currently in fullscreen mode:{' '}
+            <StyleTrueFalse>{this.state.inFullscreen}</StyleTrueFalse>
+          </div>
           <Interactive
-            as="a"
-            href="https://github.com/rafrex/fscreen"
+            as="div"
+            onClick={this.state.fullscreenEnabled && this.toggleFullscreen}
           >
-            https://github.com/rafrex/fscreen
+            {fscreenButtonText}
           </Interactive>
-        </div>
-        <div>Vendor agnostic access to the{' '}
-          <Interactive as="a" href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">
-            Fullscreen API
-          </Interactive>
-        </div>
-        <div>Fullscreen enabled:{' '}
-          <StyleTrueFalse>{this.state.fullscreenEnabled}</StyleTrueFalse>
-        </div>
-        <div>Currently in fullscreen mode:{' '}
-          <StyleTrueFalse>{this.state.inFullscreen}</StyleTrueFalse>
-        </div>
-        <Interactive
-          as="div"
-          onClick={this.state.fullscreenEnabled && this.toggleFullscreen}
-        >
-          {fscreenButtonText}
-        </Interactive>
-        <div>
-          <Interactive as="a" href="http://www.rafaelpedicini.com">
-            Code and concept by Rafael Pedicini
-          </Interactive>
+          <div>
+            <Interactive as="a" href="http://www.rafaelpedicini.com">
+              Code and concept by Rafael Pedicini
+            </Interactive>
+          </div>
         </div>
       </div>
     );
@@ -97,7 +98,7 @@ class App extends React.PureComponent {
 }
 
 function StyleTrueFalse(props) {
-  const color = props.children === true ? 'green' : 'red';
+  const color = props.children === true ? 'rgb(0, 120, 0)' : 'red';
   return <span style={{ color }}>{props.children.toString()}</span>;
 }
 StyleTrueFalse.propTypes = {
