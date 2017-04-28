@@ -59,18 +59,45 @@ class App extends React.PureComponent {
     );
     return (
       <div ref={this.handleRef}>
-        <div>Fscreen example</div>
-        <div>Fullscreen enabled: {this.state.fullscreenEnabled.toString()}</div>
-        <div>Currently in fullscreen mode: {this.state.inFullscreen.toString()}</div>
+        <div>Fscreen</div>
+        <div>
+          <Interactive
+            as="a"
+            href="https://github.com/rafrex/fscreen"
+          >
+            https://github.com/rafrex/fscreen
+          </Interactive>
+        </div>
+        <div>Vendor agnostic access to the{' '}
+          <Interactive as="a" href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">
+            Fullscreen API
+          </Interactive>
+        </div>
+        <div>Fullscreen enabled:{' '}
+          <StyleTrueFalse>{this.state.fullscreenEnabled}</StyleTrueFalse>
+        </div>
+        <div>Currently in fullscreen mode:{' '}
+          <StyleTrueFalse>{this.state.inFullscreen}</StyleTrueFalse>
+        </div>
         <Interactive
           as="div"
           onClick={this.state.fullscreenEnabled && this.toggleFullscreen}
         >
           {fscreenButtonText}
         </Interactive>
+        <div>
+          <Interactive as="a" href="http://www.rafaelpedicini.com">
+            Code and concept by Rafael Pedicini
+          </Interactive>
+        </div>
       </div>
     );
   }
+}
+
+function StyleTrueFalse(props) {
+  const color = props.children === true ? 'green' : 'red';
+  return <span style={{ color }}>{props.children.toString()}</span>;
 }
 
 render(<App />, document.getElementById('root'));
