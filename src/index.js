@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import PropTypes from 'prop-types';
 import Interactive from 'react-interactive';
 import fscreen from 'fscreen';
 
@@ -99,5 +100,8 @@ function StyleTrueFalse(props) {
   const color = props.children === true ? 'green' : 'red';
   return <span style={{ color }}>{props.children.toString()}</span>;
 }
+StyleTrueFalse.propTypes = {
+  children: PropTypes.bool.isRequired,
+};
 
 render(<App />, document.getElementById('root'));
