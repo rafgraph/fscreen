@@ -35,7 +35,7 @@ const ms = [
 ];
 
 // so it doesn't throw if no document
-const document = typeof document !== undefined ? document : {};
+const document = typeof window.document !== undefined ? window.document : {};
 
 const vendor = (
   ('fullscreenEnabled' in document && Object.keys(key)) ||
