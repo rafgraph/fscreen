@@ -24,7 +24,6 @@ fscreen.fullscreenElement === null / DOM Element;
 fscreen.requestFullscreen(element);
 // replacement for: element.requestFullscreen()
 // mapped to: element.vendorMappedRequestFullscreen()
-// returns a promise, so can do fscreen.requestFullcreen(element).then(…)
 
 fscreen.requestFullscreenFunction(element);
 // replacement for: element.requestFullscreen - without calling the function
@@ -33,7 +32,6 @@ fscreen.requestFullscreenFunction(element);
 fscreen.exitFullscreeen();
 // replacement for: document.exitFullscreen()
 // mapped to: document.vendorMappedExitFullscreen()
-// returns a promise, so can do fscreen.exitFullscreen().then(…)
 // note fscreen.exitFullscreen is mapped to document.vendorMappedExitFullscreen - without calling the function
 
 
