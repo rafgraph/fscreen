@@ -12,7 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-interactive": "^0.5.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

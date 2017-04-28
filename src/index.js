@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import Interactive from 'react-interactive';
 import fscreen from 'fscreen';
 
 class App extends React.PureComponent {
@@ -51,14 +52,22 @@ class App extends React.PureComponent {
   }
 
   render() {
+    const fscreenButtonText = (
+      (!this.state.fullscreenEnabled && 'Fullscreen Is Not Available') ||
+      (this.state.inFullscreen && 'Exit Fullscreen') ||
+      'Enter Fullscreen'
+    );
     return (
       <div ref={this.handleRef}>
         <div>Fscreen example</div>
         <div>Fullscreen enabled: {this.state.fullscreenEnabled.toString()}</div>
         <div>Currently in fullscreen mode: {this.state.inFullscreen.toString()}</div>
-        <button onClick={this.toggleFullscreen} disabled={!this.state.fullscreenEnabled}>
-          Toggle Fullscreen
-        </button>
+        <Interactive
+          as="div"
+          onClick={this.state.fullscreenEnabled && this.toggleFullscreen}
+        >
+          {fscreenButtonText}
+        </Interactive>
       </div>
     );
   }
