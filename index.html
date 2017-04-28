@@ -4,6 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fscreen Example App</title>
+
+    <style>
+      html, body, div, span, a, p, h1, h2, code {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        box-sizing: inherit;
+        font: inherit;
+        text-decoration: inherit;
+        text-align: inherit;
+        color: inherit;
+        background: transparent;
+      }
+      /*set height to 100% to pass down window height (without scroll bars) to react app*/
+      html, body, #root { height: 100%; }
+      html { background-color: rgb(0, 120, 0); }
+      #root { background-color: #F0F0F0; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
