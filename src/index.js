@@ -55,8 +55,8 @@ export default {
   set fullscreenEnabled(val) {},
   get fullscreenElement() { return document[vendor[key.fullscreenElement]]; },
   set fullscreenElement(val) {},
-  get onfullscreenchange() { document[`on${vendor[key.fullscreenchange]}`.toLowerCase()]; },
-  set onfullscreenchange(handler) { document[`on${vendor[key.fullscreenchange]}`.toLowerCase()] = handler; },
-  get onfullscreenerror() { document[`on${vendor[key.fullscreenerror]}`.toLowerCase()]; },
-  set onfullscreenerror(handler) { document[`on${vendor[key.fullscreenerror]}`.toLowerCase()] = handler; },
+  get onfullscreenchange() { return document[`on${vendor[key.fullscreenchange]}`.toLowerCase()]; },
+  set onfullscreenchange(handler) { return document[`on${vendor[key.fullscreenchange]}`.toLowerCase()] = handler; },
+  get onfullscreenerror() { return document[`on${vendor[key.fullscreenerror]}`.toLowerCase()]; },
+  set onfullscreenerror(handler) { return document[`on${vendor[key.fullscreenerror]}`.toLowerCase()] = handler; },
 };
