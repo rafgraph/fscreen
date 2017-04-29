@@ -68,12 +68,12 @@ class App extends React.PureComponent {
             repo="https://github.com/rafrex/fscreen"
           />
 
-          <div>Vendor agnostic access to the{' '}
+          <div style={{ color: 'rgb(128, 128, 128)', fontSize: '14px' }}>
+            Vendor agnostic access to the{' '}
             <Interactive
               as="a"
               href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API"
               {...s.link}
-              normal={{ ...s.link.normal, color: 'black' }}
             >
               Fullscreen API
             </Interactive>

@@ -35,7 +35,7 @@ export default function FullscreenButton(props) {
       as="div"
       onClick={!props.disabled && props.onClick}
       style={{
-        width: '320px',
+        width: '285px',
         height: '40px',
         lineHeight: '38px',
         fontSize: '18px',
