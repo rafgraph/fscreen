@@ -17,7 +17,7 @@ const webkit = [
 ];
 
 const moz = [
-  'mozFullSreenEnabled',
+  'mozFullScreenEnabled',
   'mozFullScreenElement',
   'mozRequestFullScreen',
   'mozCancelFullScreen',
