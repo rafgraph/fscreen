@@ -1,8 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import PropTypes from 'prop-types';
 import Interactive from 'react-interactive';
 import fscreen from 'fscreen';
+import Header from './Header';
+import FullscreenButton from './FullscreenButton';
+import CreditLine from './CreditLine';
+import s, { Bool } from './style';
 
 class App extends React.PureComponent {
   state = {
@@ -58,51 +61,37 @@ class App extends React.PureComponent {
       'Enter Fullscreen Mode'
     );
     return (
-      <div ref={this.handleRef} style={{ backgroundColor: '#F0F0F0', minHeight: '100%', minWidth: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <div ref={this.handleRef} style={s.root}>
         <div>
-          <div>Fscreen</div>
-          <div>
+          <Header
+            title="Fscreen"
+            repo="https://github.com/rafrex/fscreen"
+          />
+
+          <div>Vendor agnostic access to the{' '}
             <Interactive
               as="a"
-              href="https://github.com/rafrex/fscreen"
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API"
+              {...s.link}
+              normal={{ ...s.link.normal, color: 'black' }}
             >
-              https://github.com/rafrex/fscreen
-            </Interactive>
-          </div>
-          <div>Vendor agnostic access to the{' '}
-            <Interactive as="a" href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">
               Fullscreen API
             </Interactive>
           </div>
           <div>Fullscreen enabled:{' '}
-            <StyleTrueFalse>{this.state.fullscreenEnabled}</StyleTrueFalse>
+            <Bool>{this.state.fullscreenEnabled}</Bool>
           </div>
           <div>Currently in fullscreen mode:{' '}
-            <StyleTrueFalse>{this.state.inFullscreen}</StyleTrueFalse>
+            <Bool>{this.state.inFullscreen}</Bool>
           </div>
-          <Interactive
-            as="div"
-            onClick={this.state.fullscreenEnabled && this.toggleFullscreen}
-          >
+          <FullscreenButton onClick={this.state.fullscreenEnabled && this.toggleFullscreen}>
             {fscreenButtonText}
-          </Interactive>
-          <div>
-            <Interactive as="a" href="http://www.rafaelpedicini.com">
-              Code and concept by Rafael Pedicini
-            </Interactive>
-          </div>
+          </FullscreenButton>
+          <CreditLine />
         </div>
       </div>
     );
   }
 }
-
-function StyleTrueFalse(props) {
-  const color = props.children === true ? 'rgb(0, 120, 0)' : 'red';
-  return <span style={{ color }}>{props.children.toString()}</span>;
-}
-StyleTrueFalse.propTypes = {
-  children: PropTypes.bool.isRequired,
-};
 
 render(<App />, document.getElementById('root'));
