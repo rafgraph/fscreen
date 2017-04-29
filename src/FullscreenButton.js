@@ -16,6 +16,8 @@ const enabledStyle = {
     outline: '2px solid rgb(0, 168, 0)',
     outlineOffset: '1px',
   },
+  // force normal state becasue keyUp event (and some mouse events) don't fire
+  // on enter/exit fullscreen so will stay stuck in wrong state
   forceState: { iState: 'normal' },
 };
 
