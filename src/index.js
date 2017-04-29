@@ -84,7 +84,10 @@ class App extends React.PureComponent {
           <div>Currently in fullscreen mode:{' '}
             <Bool>{this.state.inFullscreen}</Bool>
           </div>
-          <FullscreenButton onClick={this.state.fullscreenEnabled && this.toggleFullscreen}>
+          <FullscreenButton
+            onClick={this.toggleFullscreen}
+            disabled={!this.state.fullscreenEnabled}
+          >
             {fscreenButtonText}
           </FullscreenButton>
           <CreditLine />
