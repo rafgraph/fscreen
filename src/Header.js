@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Interactive from 'react-interactive';
-import s from './style';
+import linkStyle from './linkStyle';
 
 export default function Header(props) {
   return (
-    <div>
+    <div style={{ marginBottom: '3px' }}>
       <div style={{ fontSize: '24px' }}>{props.title}</div>
-      <div>
-        <Interactive
-          as="a"
-          href={props.repo}
-          style={{ fontSize: '14px' }}
-          {...s.link}
-        >
-          {props.repo}
-        </Interactive>
-      </div>
+      <Interactive
+        as="a"
+        href={props.repo}
+        style={{ fontSize: '14px' }}
+        {...linkStyle}
+      >
+        {props.repo}
+      </Interactive>
     </div>
   );
 }

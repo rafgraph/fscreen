@@ -1,23 +1,23 @@
 import React from 'react';
 import Interactive from 'react-interactive';
-import s from './style';
+import linkStyle from './linkStyle';
 
 const childStyle = {
-  onParentNormal: s.link.normal,
-  onParentHover: s.link.hover,
-  onParentActive: s.link.active,
-  onParentTouchActive: s.link.touchActive,
-  onParentFocusFromTab: s.link.focusFromTab,
+  onParentNormal: linkStyle.normal,
+  onParentHover: linkStyle.hover,
+  onParentActive: linkStyle.active,
+  onParentTouchActive: linkStyle.touchActive,
+  onParentFocusFromTab: linkStyle.focusFromTab,
 };
 
 export default function CreditLine() {
   return (
-    <div>
+    <div style={{ marginTop: '22px' }}>
       <Interactive
         as="a"
         href="http://www.rafaelpedicini.com"
         style={{
-          color: s.link.normal.color,
+          color: linkStyle.normal.color,
           fontSize: '14px',
         }}
         focusFromTab={{}}

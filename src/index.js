@@ -5,7 +5,8 @@ import fscreen from 'fscreen';
 import Header from './Header';
 import FullscreenButton from './FullscreenButton';
 import CreditLine from './CreditLine';
-import s, { Bool } from './style';
+import Bool from './Bool';
+import linkStyle from './linkStyle';
 
 class App extends React.PureComponent {
   state = {
@@ -61,35 +62,50 @@ class App extends React.PureComponent {
       'Enter Fullscreen Mode'
     );
     return (
-      <div ref={this.handleRef} style={s.root}>
-        <div>
+      <div
+        ref={this.handleRef}
+        style={{
+          backgroundColor: '#F0F0F0',
+          minHeight: '100%',
+          minWidth: '100%',
+          fontFamily: 'helvetica, sans-serif',
+          fontWeight: '300',
+          fontSize: '16px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div style={{ marginBottom: '6vh' }}>
           <Header
             title="Fscreen"
             repo="https://github.com/rafrex/fscreen"
           />
 
-          <div style={{ color: 'rgb(128, 128, 128)', fontSize: '14px' }}>
+          <div style={{ color: 'rgb(128, 128, 128)', fontSize: '14px', marginBottom: '12px' }}>
             Vendor agnostic access to the{' '}
             <Interactive
               as="a"
               href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API"
-              {...s.link}
-            >
-              Fullscreen API
-            </Interactive>
+              {...linkStyle}
+            >Fullscreen API</Interactive>
           </div>
-          <div>Fullscreen enabled:{' '}
+
+          <div style={{ marginBottom: '4px' }}>
+            Fullscreen enabled:{' '}
             <Bool>{this.state.fullscreenEnabled}</Bool>
           </div>
-          <div>Currently in fullscreen mode:{' '}
+          <div style={{ marginBottom: '20px' }}>
+            Currently in fullscreen mode:{' '}
             <Bool>{this.state.inFullscreen}</Bool>
           </div>
+
           <FullscreenButton
             onClick={this.toggleFullscreen}
             disabled={!this.state.fullscreenEnabled}
-          >
-            {fscreenButtonText}
-          </FullscreenButton>
+          >{fscreenButtonText}</FullscreenButton>
+
           <CreditLine />
         </div>
       </div>
