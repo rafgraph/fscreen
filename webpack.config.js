@@ -8,12 +8,9 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
     ],
-  },
-  resolve: {
-    extensions: ['.js'],
   },
   plugins: process.argv.indexOf('-p') === -1 ? [] : [
     new webpack.DefinePlugin({
