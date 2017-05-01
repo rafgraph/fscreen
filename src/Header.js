@@ -5,8 +5,8 @@ import linkStyle from './linkStyle';
 
 export default function Header(props) {
   return (
-    <div style={{ marginBottom: '3px' }}>
-      <div style={{ fontSize: '24px' }}>{props.title}</div>
+    <div style={{ marginBottom: '5px' }}>
+      <div style={{ fontSize: '24px', marginBottom: '2px' }}>{props.title}</div>
       <Interactive
         as="a"
         href={props.repo}

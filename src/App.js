@@ -82,7 +82,7 @@ export default class App extends React.PureComponent {
             repo="https://github.com/rafrex/fscreen"
           />
 
-          <div style={{ color: 'rgb(128, 128, 128)', fontSize: '14px', marginBottom: '12px' }}>
+          <div style={{ color: 'rgb(128, 128, 128)', fontSize: '14px', marginBottom: '20px' }}>
             Vendor agnostic access to the{' '}
             <Interactive
               as="a"
@@ -95,7 +95,7 @@ export default class App extends React.PureComponent {
             Fullscreen enabled:{' '}
             <Bool>{this.state.fullscreenEnabled}</Bool>
           </div>
-          <div style={{ marginBottom: '20px' }}>
+          <div style={{ marginBottom: '26px' }}>
             Currently in fullscreen mode:{' '}
             <Bool>{this.state.inFullscreen}</Bool>
           </div>

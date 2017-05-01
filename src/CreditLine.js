@@ -12,7 +12,7 @@ const childStyle = {
 
 export default function CreditLine() {
   return (
-    <div style={{ marginTop: '22px' }}>
+    <div style={{ marginTop: '30px' }}>
       <Interactive
         as="a"
         href="http://www.rafaelpedicini.com"
