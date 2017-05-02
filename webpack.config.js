@@ -13,9 +13,6 @@ module.exports = {
     ],
   },
   plugins: process.argv.indexOf('-p') === -1 ? [] : [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
     new webpack.optimize.UglifyJsPlugin({
       output: {
         comments: false,
