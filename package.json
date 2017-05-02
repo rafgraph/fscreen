@@ -2,8 +2,9 @@
   "name": "fscreen-example-app",
   "description": "Example app for fscreen",
   "scripts": {
+    "start-local": "npm link fscreen && npm start",
     "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --public 10.0.1.4:8080 --history-api-fallback --open",
-    "build": "webpack -p"
+    "build": "npm unlink fscreen && npm install --save fscreen && webpack -p"
   },
   "repository": {
     "type": "git",
