@@ -4,9 +4,9 @@
   "description": "fullscreen spec api in a vendor agnostic wrapper",
   "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf lib && babel src -d lib --presets babel-preset-env",
+    "build": "rm -rf lib && babel src -d lib --presets=env",
     "prepublish": "npm run build",
-    "dev": "npm link && babel src --watch -d lib --presets babel-preset-env"
+    "dev": "npm link && babel src -d lib --watch --presets=env"
   },
   "repository": {
     "type": "git",
