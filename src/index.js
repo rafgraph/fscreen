@@ -34,8 +34,8 @@ const ms = [
   'MSFullscreenError',
 ];
 
-// so it doesn't throw if no document
-const document = typeof window.document !== undefined ? window.document : {};
+// so it doesn't throw if no window or document
+const document = typeof window !== 'undefined' && typeof window.document !== 'undefined' ? window.document : {};
 
 const vendor = (
   ('fullscreenEnabled' in document && Object.keys(key)) ||
