@@ -47,9 +47,9 @@ fscreen.addEventListener(‘fullscreenchange’, handler, options);
 // replacement for: document.addEventListener(‘fullscreenchange’, handler, options)
 // mapped to: document.addEventListener(‘vendorMappedFullscreenchange’, handler, options)
 
-fscreen.removeEventListener(‘fullscreenchange’, handler);
-// replacement for: document.removeEventListener(‘fullscreenchange’, handler)
-// mapped to: document.removeEventListener(‘vendorMappedFullscreenchange’, handler)
+fscreen.removeEventListener(‘fullscreenchange’, handler, options);
+// replacement for: document.removeEventListener(‘fullscreenchange’, handler, options)
+// mapped to: document.removeEventListener(‘vendorMappedFullscreenchange’, handler, options)
 
 
 fscreen.onfullscreenerror = handler;
@@ -60,9 +60,9 @@ fscreen.addEventListener(‘fullscreenerror’, handler, options);
 // replacement for: document.addEventListener(‘fullscreenerror’, handler, options)
 // mapped to: document.addEventListener(‘vendorMappedFullscreenerror’, handler, options)
 
-fscreen.removeEventListener(‘fullscreenerror’, handler);
-// replacement for: document.removeEventListener(‘fullscreenerror’, handler)
-// mapped to: document.removeEventListener(‘vendorMappedFullscreenerror’, handler)
+fscreen.removeEventListener(‘fullscreenerror’, handler, options);
+// replacement for: document.removeEventListener(‘fullscreenerror’, handler, options)
+// mapped to: document.removeEventListener(‘vendorMappedFullscreenerror’, handler, options)
 ```
 
 ## Usage
