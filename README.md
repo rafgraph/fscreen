@@ -32,7 +32,7 @@ fscreen.requestFullscreenFunction(element);
 // replacement for: element.requestFullscreen - without calling the function
 // mapped to: element.vendorMappedRequestFullscreen
 
-fscreen.exitFullscreen();
+fscreen.exitFullscreen;
 // replacement for: document.exitFullscreen()
 // mapped to: document.vendorMappedExitFullscreen()
 // note that fscreen.exitFullscreen is mapped to
