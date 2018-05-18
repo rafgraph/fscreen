@@ -63,6 +63,10 @@ fscreen.addEventListener('fullscreenerror', handler, options);
 fscreen.removeEventListener('fullscreenerror', handler, options);
 // replacement for: document.removeEventListener('fullscreenerror', handler, options)
 // mapped to: document.removeEventListener('vendorMappedFullscreenerror', handler, options)
+
+fscreen.support;
+// value indicates whether the browser has fullscreen support: true if the browser
+// has support
 ```
 
 ## Usage

@@ -37,15 +37,18 @@ const ms = [
 // so it doesn't throw if no window or document
 const document = typeof window !== 'undefined' && typeof window.document !== 'undefined' ? window.document : {};
 
+const NO_SUPPORT = [];
+
 const vendor = (
   ('fullscreenEnabled' in document && Object.keys(key)) ||
   (webkit[0] in document && webkit) ||
   (moz[0] in document && moz) ||
   (ms[0] in document && ms) ||
-  []
+  NO_SUPPORT
 );
 
 export default {
+  support: vendor !== NO_SUPPORT,
   requestFullscreen: element => element[vendor[key.requestFullscreen]](),
   requestFullscreenFunction: element => element[vendor[key.requestFullscreen]],
   get exitFullscreen() { return document[vendor[key.exitFullscreen]].bind(document); },
