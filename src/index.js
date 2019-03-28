@@ -5,6 +5,7 @@ const key = {
   exitFullscreen: 3,
   fullscreenchange: 4,
   fullscreenerror: 5,
+  fullscreen: 6
 };
 
 const webkit = [
@@ -14,6 +15,7 @@ const webkit = [
   'webkitExitFullscreen',
   'webkitfullscreenchange',
   'webkitfullscreenerror',
+  '-webkit-full-screen',
 ];
 
 const moz = [
@@ -23,6 +25,7 @@ const moz = [
   'mozCancelFullScreen',
   'mozfullscreenchange',
   'mozfullscreenerror',
+  '-moz-full-screen',
 ];
 
 const ms = [
@@ -32,6 +35,7 @@ const ms = [
   'msExitFullscreen',
   'MSFullscreenChange',
   'MSFullscreenError',
+  '-ms-fullscreen',
 ];
 
 // so it doesn't throw if no window or document
@@ -49,6 +53,7 @@ export default {
   requestFullscreen: element => element[vendor[key.requestFullscreen]](),
   requestFullscreenFunction: element => element[vendor[key.requestFullscreen]],
   get exitFullscreen() { return document[vendor[key.exitFullscreen]].bind(document); },
+  get fullscreenPseudoClass() { return ":" + vendor[key.fullscreen]; },
   addEventListener: (type, handler, options) => document.addEventListener(vendor[key[type]], handler, options),
   removeEventListener: (type, handler, options) => document.removeEventListener(vendor[key[type]], handler, options),
   get fullscreenEnabled() { return Boolean(document[vendor[key.fullscreenEnabled]]); },
