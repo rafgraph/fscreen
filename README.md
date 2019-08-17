@@ -63,6 +63,13 @@ fscreen.addEventListener('fullscreenerror', handler, options);
 fscreen.removeEventListener('fullscreenerror', handler, options);
 // replacement for: document.removeEventListener('fullscreenerror', handler, options)
 // mapped to: document.removeEventListener('vendorMappedFullscreenerror', handler, options)
+
+
+fscreen.fullscreenPseudoClass;
+// returns: the vendorMapped fullscreen Pseudo Class
+// i.e. :fullscreen, :-webkit-full-screen, :-moz-full-screen, :-ms-fullscreen
+// Can be used to find any elements that are fullscreen using the vendorMapped Pseudo Class 
+// e.g. document.querySelectorAll(fscreen.fullscreenPseudoClass).forEach(...);
 ```
 
 ## Usage
