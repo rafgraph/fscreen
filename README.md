@@ -18,7 +18,7 @@ fscreen.fullscreenEnabled === true / false;
 
 fscreen.fullscreenElement === null|undefined / DOM Element;
 // null if not in fullscreen mode, or the DOM element that's in fullscreen mode
-// undefined instead of null in iOS
+// undefined if fullscreen is not supported by device
 // replacement for: document.fullscreenElement
 // mapped to: document.vendorMappedFullsceenElement
 // note that fscreen.fullscreenElement uses a getter to retrieve the element
