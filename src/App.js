@@ -3,7 +3,6 @@ import Interactive from 'react-interactive';
 import fscreen from 'fscreen';
 import Header from './Header';
 import FullscreenButton from './FullscreenButton';
-import CreditLine from './CreditLine';
 import Bool from './Bool';
 import linkStyle from './linkStyle';
 
@@ -79,7 +78,7 @@ export default class App extends React.PureComponent {
         <div style={{ marginBottom: '6vh' }}>
           <Header
             title="Fscreen"
-            repo="https://github.com/rafrex/fscreen"
+            repo="https://github.com/rafgraph/fscreen"
           />
 
           <div style={{ color: 'rgb(128, 128, 128)', fontSize: '14px', marginBottom: '20px' }}>
@@ -104,8 +103,7 @@ export default class App extends React.PureComponent {
             onClick={this.toggleFullscreen}
             disabled={!this.state.fullscreenEnabled}
           >{fscreenButtonText}</FullscreenButton>
-
-          <CreditLine />
+          
         </div>
       </div>
     );

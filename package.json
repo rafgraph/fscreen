@@ -3,21 +3,21 @@
   "description": "Example app for fscreen",
   "scripts": {
     "start-local": "npm link fscreen && npm start",
-    "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --public 10.0.1.4:8080 --history-api-fallback --open",
+    "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --disable-host-check --history-api-fallback --open",
     "build": "npm unlink fscreen && npm install --save fscreen && webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/fscreen.git"
+    "url": "git+https://github.com/rafgraph/fscreen.git"
   },
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Rafael Pedicini <rafael@rafgraph.dev>",
   "license": "MIT",
   "dependencies": {
-    "fscreen": "^1.0.1",
-    "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-interactive": "^0.6.5"
+    "fscreen": "^1.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-interactive": "^0.9.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -31,7 +31,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.5"
   }
 }
