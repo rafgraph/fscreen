@@ -53,7 +53,7 @@ export default {
   requestFullscreen: element => element[vendor[key.requestFullscreen]](),
   requestFullscreenFunction: element => element[vendor[key.requestFullscreen]],
   get exitFullscreen() { return document[vendor[key.exitFullscreen]].bind(document); },
-  get fullscreenPseudoClass() { return ":" + vendor[key.fullscreen]; },
+  get fullscreenPseudoClass() { return `:${vendor[key.fullscreen]}`; },
   addEventListener: (type, handler, options) => document.addEventListener(vendor[key[type]], handler, options),
   removeEventListener: (type, handler, options) => document.removeEventListener(vendor[key[type]], handler, options),
   get fullscreenEnabled() { return Boolean(document[vendor[key.fullscreenEnabled]]); },

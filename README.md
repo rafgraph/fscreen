@@ -16,9 +16,9 @@ fscreen.fullscreenEnabled === true / false;
 // replacement for: document.fullscreenEnabled
 // mapped to: document.vendorMappedFullscreenEnabled
 
-fscreen.fullscreenElement === null|undefined / DOM Element;
+fscreen.fullscreenElement === null / undefined / DOM Element;
 // null if not in fullscreen mode, or the DOM element that's in fullscreen mode
-// undefined if fullscreen is not supported by device
+// (if fullscreen is not supported by the device it will be undefined)
 // replacement for: document.fullscreenElement
 // mapped to: document.vendorMappedFullsceenElement
 // note that fscreen.fullscreenElement uses a getter to retrieve the element
@@ -84,7 +84,7 @@ if (fscreen.fullscreenEnabled) {
 }
 
 function handler() {
- if (fscreen.fullscreenElement !== null && fscreen.fullscreenElement !== undefined) {
+ if (fscreen.fullscreenElement !== null) {
    console.log('Entered fullscreen mode');
  } else {
    console.log('Exited fullscreen mode');
