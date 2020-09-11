@@ -1,6 +1,10 @@
 # Fscreen - Fullscreen API
 
-[Live Example](http://fscreen.rafrex.com)
+[![npm](https://img.shields.io/npm/dm/fscreen?label=npm)](https://www.npmjs.com/package/fscreen)
+
+[Demo website](https://fscreen.rafgraph.dev) (demo code on the [`gh-pages` branch](https://github.com/rafgraph/fscreen/tree/gh-pages))
+
+---
 
 Vendor agnostic access to the [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API). Build with the Fullscreen API as intended without worrying about vendor prefixes.
 

@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/fscreen.git"
+    "url": "git+https://github.com/rafgraph/fscreen.git"
   },
   "files": [
     "lib",
@@ -20,12 +20,12 @@
     "fullscreen",
     "browser"
   ],
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Rafael Pedicini <rafael@rafgraph.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rafrex/fscreen/issues"
+    "url": "https://github.com/rafgraph/fscreen/issues"
   },
-  "homepage": "https://github.com/rafrex/fscreen#readme",
+  "homepage": "https://github.com/rafgraph/fscreen#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.4.0"
