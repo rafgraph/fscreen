@@ -1,6 +1,6 @@
 {
   "name": "fscreen",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "fullscreen spec api in a vendor agnostic wrapper",
   "main": "lib/index.js",
   "scripts": {
