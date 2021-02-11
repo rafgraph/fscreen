@@ -1,6 +1,6 @@
 {
   "name": "fscreen",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Vendor agnostic access to the fullscreen spec api",
   "main": "dist/fscreen.cjs.js",
   "module": "dist/fscreen.esm.js",
