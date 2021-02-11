@@ -2,9 +2,9 @@
   "name": "fscreen-example-app",
   "description": "Example app for fscreen",
   "scripts": {
-    "start-local": "npm link fscreen && npm start",
+    "dev": "npm link fscreen && npm start",
     "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --disable-host-check --history-api-fallback --open",
-    "build": "npm unlink fscreen && npm install --save fscreen && webpack -p"
+    "build": "npm install --save fscreen@latest && webpack -p"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "author": "Rafael Pedicini <rafael@rafgraph.dev>",
   "license": "MIT",
   "dependencies": {
-    "fscreen": "^1.1.0",
+    "fscreen": "^1.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
