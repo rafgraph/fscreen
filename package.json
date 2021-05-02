@@ -9,7 +9,8 @@
     "dev": "npm link && npm run watch",
     "build": "rollpkg build",
     "watch": "rollpkg watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "lintStaged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,15 @@
   },
   "homepage": "https://github.com/rafgraph/fscreen#readme",
   "devDependencies": {
-    "rollpkg": "^0.4.2"
-  }
+    "lint-staged": "^10.5.4",
+    "pre-commit": "^1.2.2",
+    "rollpkg": "^0.5.5"
+  },
+  "pre-commit": "lintStaged",
+  "lint-staged": {
+    "(src/**/*|demo/src/**/*)": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "prettier": "rollpkg/configs/prettier.json"
 }

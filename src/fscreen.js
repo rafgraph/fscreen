@@ -5,7 +5,7 @@ const key = {
   exitFullscreen: 3,
   fullscreenchange: 4,
   fullscreenerror: 5,
-  fullscreen: 6
+  fullscreen: 6,
 };
 
 const webkit = [
@@ -39,16 +39,19 @@ const ms = [
 ];
 
 // so it doesn't throw if no window or document
-const document = typeof window !== 'undefined' && typeof window.document !== 'undefined' ? window.document : {};
+const document =
+  typeof window !== 'undefined' && typeof window.document !== 'undefined'
+    ? window.document
+    : {};
 
-const vendor = (
+const vendor =
   ('fullscreenEnabled' in document && Object.keys(key)) ||
   (webkit[0] in document && webkit) ||
   (moz[0] in document && moz) ||
   (ms[0] in document && ms) ||
-  []
-);
+  [];
 
+// prettier-ignore
 export default {
   requestFullscreen: element => element[vendor[key.requestFullscreen]](),
   requestFullscreenFunction: element => element[vendor[key.requestFullscreen]],
