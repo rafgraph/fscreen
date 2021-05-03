@@ -1,0 +1,55 @@
+{
+  "name": "fscreen-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@radix-ui/react-icons": "^1.0.3",
+    "@stitches/react": "^0.1.9",
+    "fscreen": "^1.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-interactive": "^1.1.0",
+    "use-dark-mode": "^2.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.8",
+    "@types/fscreen": "^1.0.1",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.1",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "browserslist-config-css-grid": "^1.0.0",
+    "gh-pages": "^3.1.0",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "dev": "npm install --save ../ && npm start",
+    "devCleanup": "npm install --save fscreen@latest",
+    "deploy": "gh-pages --dist build --message Built-`date +%Y%m%d`-`date +%H%M%S`",
+    "predeploy": "npm run devCleanup && npm run lint && npm test -- --watchAll=false && npm run build",
+    "lint": "eslint src",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "last 2 versions or > 0.2% and not dead and extends browserslist-config-css-grid"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

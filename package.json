@@ -6,7 +6,6 @@
   "module": "dist/fscreen.esm.js",
   "sideEffects": false,
   "scripts": {
-    "dev": "npm link && npm run watch",
     "build": "rollpkg build",
     "watch": "rollpkg watch",
     "prepublishOnly": "npm run build",
