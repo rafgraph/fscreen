@@ -1,6 +1,6 @@
 # Fscreen - Fullscreen API
 
-[![npm](https://img.shields.io/npm/dm/fscreen?label=npm)](https://www.npmjs.com/package/fscreen)
+[![npm](https://img.shields.io/npm/dm/fscreen?label=npm)](https://www.npmjs.com/package/fscreen) [![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/fscreen?color=purple)](https://bundlephobia.com/result?p=fscreen)
 
 Vendor agnostic access to the [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API). Build with the Fullscreen API as intended without worrying about vendor prefixes.
 
